@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-zinc-200 antialiased;
+    font-feature-settings:
+      'ss01' 1,
+      'ss02' 1,
+      'cv11' 1;
+  }
+
+  ::selection {
+    background: rgba(34, 211, 238, 0.25);
+  }
+}
+
+@layer components {
+  .container-max {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass {
+    @apply rounded-3xl border border-white/10 bg-glass backdrop-blur-xl shadow-glass;
+  }
+
+  .glass-strong {
+    @apply rounded-3xl border border-white/10 bg-glass-strong backdrop-blur-xl shadow-glass;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-50;
+  }
+
+  .section-subtitle {
+    @apply mt-3 max-w-3xl text-sm sm:text-base text-zinc-300/80 leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, #22d3ee 0%, #a855f7 55%, #d8b4fe 100%);
+  }
+
+  .ring-glow {
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.08),
+      0 0 42px rgba(34, 211, 238, 0.12),
+      0 0 64px rgba(192, 132, 252, 0.08);
+  }
+}
