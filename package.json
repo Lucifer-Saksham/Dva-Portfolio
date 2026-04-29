@@ -4,7 +4,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://lucifer-saksham.github.io/saksham-analytics-portfolio",
+  "homepage": "https://lucifer-saksham.github.io/Dva-Portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
